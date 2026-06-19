@@ -1,0 +1,270 @@
+/* Cyber-Kosmos Premium CSS */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at center, #020617 0%, #000211 100%);
+    color: #f8fafc;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding-top: 140px;
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+}
+
+/* TUGMANI BOSGANDA SARLAVHANING ENG TEPASIGA REJALI TO'XTASH */
+section {
+    scroll-margin-top: 130px; /* Navbar ostiga yashirinib qolmasligi uchun joy qoldiradi */
+}
+
+/* Harakatlanuvchi koinot yulduzlari */
+.space-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.3) 1.5px, transparent 30px),
+        radial-gradient(#3b82f6, rgba(59,130,246,.2) 2px, transparent 40px);
+    background-size: 400px 400px, 600px 600px;
+    background-position: 0 0, 50px 100px;
+    opacity: 0.35;
+    z-index: -1;
+    animation: spaceMove 120s linear infinite;
+}
+
+@keyframes spaceMove {
+    from { background-position: 0 0, 50px 100px; }
+    to { background-position: 400px 400px, 650px 700px; }
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Yuguruvchi satr premium dizayni */
+.marquee-container {
+    width: 100%;
+    background: rgba(2, 6, 23, 0.9);
+    border-bottom: 1px dashed rgba(0, 242, 254, 0.4);
+    color: #00f2fe;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Tepaga joylashgan navigatsiya paneli */
+.top-navbar {
+    position: fixed;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    padding: 12px 40px;
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Navbardagi premium kiber rasm */
+#cyber-nav-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #00f2fe;
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#cyber-nav-img:hover {
+    width: 100px;
+    height:100px;
+    border-radius:50%;
+
+}
+
+/* TO'G'RILANDI: Navbardagi g'alati harflar kodi o'chirildi, silliq effekt berildi */
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 25px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: #00f2fe;
+    text-shadow: 0 0 12px rgba(0, 242, 254, 0.8);
+}
+
+.lang-select {
+    background: #0f172a;
+    color: #3b82f6;
+    border: 1px solid #2563eb;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Ism-sharif */
+.hero-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero-name {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #ffffff, #3b82f6, #00f2fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(0, 242, 254, 0.4)); 
+    animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #94a3b8;
+    margin-top: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cursor {
+    color: #00f2fe;
+    font-weight: bold;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* XAKER USLUBIDAGI MATN VA SHRIFTLAR (Kodi o'zgarmaydi, stili kiber-terminal) */
+.hacker-text {
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #a7f3d0 !important; /* Och yashil kiber tus */
+    font-size: 1.05rem;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+/* YANGLANDI: Qutilarning o'zlari avtomatik ravishda ohista va salpal aylanib/qimirlab turadi */
+.cyber-section, .project-card {
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 40px;
+    border-radius: 24px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    
+    /* Avtomatik suzish va salpal tebranish animatsiyasi */
+    animation: automaticCosmicFloat 12s ease-in-out infinite;
+}
+
+/* Qutilar bir xilda aylanmasligi uchun vaqtlarini farqlaymiz */
+section:nth-child(even) { animation-delay: -3s; }
+.project-card:nth-child(even) { animation-delay: -6s; }
+
+/* Qutilar ustiga borilganda sal porlaydi, lekin 3D egilmaydi */
+.cyber-section:hover, .project-card:hover {
+    border-color: rgba(0, 242, 254, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 242, 254, 0.2);
+}
+
+/* AVTOMATIK TEBRANISH VA SAL-PAL AYLANISH ANIMATSIYASI */
+@keyframes automaticCosmicFloat {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    33% { transform: translate(4px, -6px) rotate(0.4deg); }   /* Tepaga va ozgina o'ngga burilish */
+    66% { transform: translate(-4px, 4px) rotate(-0.4deg); }  /* Pastga va ozgina chapga burilish */
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+h2 {
+    color: #00f2fe;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Ko'nikmalar */
+.skill-box { margin-bottom: 20px; font-family: 'Courier New', Courier, monospace; }
+.skill-name { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600; }
+.progress-bar { background: #0b1329; height: 14px; border-radius: 7px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
+.progress { background: linear-gradient(90deg, #3b82f6, #00f2fe); height: 100%; border-radius: 7px; box-shadow: 0 0 15px #00f2fe; }
+
+/* Loyihalar */
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+@media (max-width: 700px) { .projects-grid { grid-template-columns: 1fr; } }
+
+.project-card { background: rgba(30, 41, 59, 0.35); padding: 25px; border-radius: 16px; margin-bottom: 0px; }
+.project-card h3 { color: #fff; margin-bottom: 12px; font-size: 1.3rem; font-family: 'Courier New', Courier, monospace; }
+.project-link { display: inline-block; margin-top: 15px; color: #00f2fe; text-decoration: none; font-weight: bold; font-family: 'Courier New', Courier, monospace; }
+
+/* XAKER USLUBIDAGI XABAR YOZISH FORMASI (INPUT VA TEXTAREA) */
+.contact-form { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+
+.hacker-input {
+    width: 100%;
+    background: #040814 !important;
+    border: 1px solid #1e3a8a !important;
+    padding: 14px;
+    border-radius: 10px;
+    color: #38bdf8 !important; /* Kiber ko'k yozuv */
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+    font-family: 'Courier New', Courier, monospace !important; /* Xaker shrifti */
+}
+
+.hacker-input::placeholder {
+    color: #1e40af; /* To'q ko'k kiber yordamchi matn */
+}
+
+.hacker-input:focus {
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4) !important;
+    color: #00f2fe !important;
+}
+
+.submit-btn {
+    background: linear-gradient(90deg, #2563eb, #00f2fe); color: #000; font-weight: bold;
+    padding: 14px; border: none; border-radius: 10px; cursor: pointer; font-size: 1.1rem;
+    text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+}
+.submit-btn:hover { box-shadow: 0 0 25px #00f2fe; color: #fff; }
+
+@keyframes poolGlow { 0% { filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4)); } 100% { filter: drop-shadow(0 0 25px rgba(0, 242, 254, 0.8)); } }
