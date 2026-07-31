@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta name="google-site-verification" content="6KDW8WatE_Nkdg4kQwuuc7iC4-Ka6697idZS3tRBAGk" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhriddin Qurbonov | Portfolio Cyber Pro</title>
@@ -49,7 +48,7 @@
         <!-- Men haqimda -->
         <section id="about" class="cyber-section">
             <h2 id="title-about">🌌 Men haqimda</h2>
-            <p id="text-about" class="hacker-text">Salom! Mening ismim Muhriddin. Hozirda dasturlashni faol o'rganyapman. Veb-saytlarning ko'rinadigan qismini (UI) yaratishga qiziqaman va har kuni bilimlarimni oshirib bormoqdaman.</p>
+            <p id="text-about" class="hacker-text">Salom! Mening ismim Muhriddin. Hozirda Front-End dasturlash yo'nalishini faol o'rganyapman. Veb-saytlarning ko'rinadigan qismini (UI) yaratishga qiziqaman va har kuni bilimlarimni oshirib bormoqdaman.</p>
         </section>
 
         <!-- Ko'nikmalar -->
@@ -71,7 +70,7 @@
 
         <!-- Loyihalar -->
         <section id="projects" class="cyber-section">
-            <h2 id="title-projects">💻 Mening Loyihalarim </h2>
+            <h2 id="title-projects">💻 Mening Loyihalarim (GitHub)</h2>
             <div class="projects-grid">
                 
                 <!-- 1-Sayt -->
@@ -87,24 +86,30 @@
                     <p id="p2-desc" class="hacker-text">Bu saytim esa qiziqarli va interaktiv onlayn o'yinlar olamini o'z ichiga oladi.</p>
                     <a href="https://muhriddinq677-gif.github.io/uzgames.site/" target="_blank" class="project-link" id="p2-link">O'yinni ko'rish →</a>
                 </div>
+                <div class="project-card">
+                    <h3 id="p3-title">Aqlli Bolajon sayti</h3>
+                    <p id="p3-desc" class="hacker-text">Bu saytim esa bolalar uchun mos bo'lib unda o'ynab bilim olishadi.</p>
+                    <a href="https://muhriddinq677-gif.github.io/Aqlli-bolajon/" target="_blank" class="project-link" id="p3-link">O'yinni ko'rish →</a>
+                </div>
 
             </div>
         </section>
 
         <!-- Xabar yuborish formasi -->
-        <section id="contact" class="cyber-section">
-            <h2 id="title-contact">📡 Aloqa & Xabar yuborish</h2>
-            <form class="contact-form" onsubmit="event.preventDefault(); alert('Xabar yuborildi! (Hozircha test rejimi)');">
-                <div class="form-group">
-                    <input type="text" id="input-name" placeholder="Ismingiz" required class="hacker-input">
-                </div>
-                <div class="form-group">
-                    <textarea id="input-msg" rows="4" placeholder="Xabaringizni shu yerga yozing..." required class="hacker-input"></textarea>
-                </div>
-                <button type="submit" class="submit-btn" id="btn-send">Yuborish</button>
-            </form>
-        </section>
-    </div>
+     <section id="contact" class="cyber-section"> 
+    <h2 id="title-contact">📡 Aloqa & Xabar yuborish</h2> 
+    
+    <form class="contact-form" id="cyber-form"> 
+        <div class="form-group"> 
+            <!-- Ism o'rniga Email kiritish maydoni qo'shildi -->
+            <input type="email" id="input-email" placeholder="Sizning Emailingiz (Kimdan)" required class="hacker-input"> 
+        </div> 
+        <div class="form-group"> 
+            <textarea id="input-msg" rows="4" placeholder="Xabaringizni shu yerga yozing..." required class="hacker-input"></textarea> 
+        </div> 
+        <button type="submit" class="submit-btn" id="btn-send">Yuborish</button> 
+    </form> 
+</section>
 
     <!-- JavaScript faylini bog'lash -->
     <script src="script.js"></script>
